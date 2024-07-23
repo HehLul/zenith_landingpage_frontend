@@ -1,0 +1,622 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+/* --------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 30px 40px;
+  background-color: black;
+  color: white;
+  font-family: "Roboto";
+  --PURPLE: #8c52ff;
+}
+h1 {
+  font-size: 3.5rem;
+}
+input {
+  padding: 15px 10px;
+  width: 250px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+}
+button {
+  background-color: var(--PURPLE);
+  border-radius: 10px;
+  padding: 15px 25px;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+  transform: scale(1.1); /* Increase size by 10% */
+}
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.navbar .logo {
+  width: 220px;
+  padding: auto;
+  position: relative;
+}
+
+.navbar > .line {
+  height: 1px;
+  background-color: white;
+  width: 100%; /* Adjust this width as needed */
+  margin-top: -75px; /* Adjust this margin as needed */
+}
+/* ---------------------------------------- */
+.hero {
+  padding: 85px 0 450px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero > .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.hero > .content > h1 {
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero > .content > h2 {
+  margin-top: 20px;
+  max-width: 780px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.hero > .content > form {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.hero > .content > h3 {
+  margin-top: 15px;
+}
+
+.hero > .kobe,
+.hero > .thomas,
+.hero > .jocko,
+.hero > .john,
+.hero > .david {
+  animation: slideIn 1s ease forwards;
+  opacity: 0;
+}
+
+.hero > .kobe {
+  position: absolute;
+  top: 270px;
+  left: 45px;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  z-index: -1;
+  animation-name: slideInFromLeft;
+}
+
+.hero > .thomas {
+  position: absolute;
+  top: 620px;
+  left: 200px;
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  z-index: -1;
+  animation-name: slideInFromLeft;
+}
+
+.hero > .jocko {
+  position: absolute;
+  top: 720px;
+  justify-self: center;
+  width: 400px;
+  height: 270px;
+  object-fit: cover;
+  z-index: -2;
+  animation-name: slideInFromBottom;
+}
+
+.hero > .john {
+  position: absolute;
+  top: 550px;
+  right: 140px;
+  justify-self: center;
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+  z-index: -1;
+  animation-name: slideInFromRight;
+}
+
+.hero > .david {
+  position: absolute;
+  top: 170px;
+  right: 43px;
+  justify-self: center;
+  width: 180px;
+  height: 400px;
+  object-fit: contain;
+  z-index: -1;
+  animation-name: slideInFromRight;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------- */
+.why {
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  gap: 75px;
+}
+.why > .text {
+  max-width: 600px;
+}
+.why > .text > h2 {
+  font-size: 2.5rem;
+}
+.why > .text > h4 {
+  margin-top: 35px;
+  font-size: 1.3rem;
+}
+.why > img {
+  width: 600px;
+}
+/* ------------------------------------------ */
+.features {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.features > h2 {
+  font-size: 2.5rem;
+  max-width: 900px;
+  text-align: center;
+}
+.features-container {
+  margin-top: 100px;
+  display: flex;
+  gap: 50px;
+}
+.feature > h3 {
+  font-size: 1.4rem;
+}
+.features-container > .feature {
+  max-width: 275px;
+  text-align: center;
+}
+.feature > p {
+  margin-top: 25px;
+  line-height: 25px;
+}
+/* ------------------------------------------ */
+
+/* Existing styles... */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.why > .text,
+.features > h2,
+.features-container > .feature {
+  opacity: 0;
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.why > .text.animate {
+  animation: fadeInUp 0.6s forwards;
+  animation-delay: 0.2s; /* Add a 0.2s delay for the text in the .why section */
+}
+
+.features > h2.animate {
+  animation: fadeInUp 0.6s forwards;
+  animation-delay: 0.2s; /* Add a 0.3s delay for the features section header */
+}
+
+.features-container > .feature.animate {
+  animation: fadeIn 0.6s forwards;
+  animation-delay: 0.3s; /* Add a 0.4s delay for the individual features */
+}
+
+.last {
+  display: flex;
+  align-items: center;
+  gap: 300px;
+}
+.last > .content {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.last > .content > img {
+  width: 200px;
+  height: 50px;
+  object-fit: cover;
+  display: none;
+}
+.last > .content > h4 {
+  margin-top: 40px;
+  /* margin-left: 5px; */
+  max-width: 60%;
+  font-size: 1.5rem;
+}
+.last > .content > p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+.last > form {
+  display: flex;
+  gap: 20px;
+}
+
+.last + .line {
+  height: 1px;
+  background-color: white;
+  width: 100%; /* Adjust this width as needed */
+  margin-top: 25px; /* Adjust this margin as needed */
+}
+/* ----------------------------- */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+@media (max-width: 1320px) {
+  .hero > .jocko {
+    width: 350px;
+  }
+  .hero > .thomas {
+    left: 100px;
+  }
+  .hero > .john {
+    right: 100px;
+  }
+  .hero > .david {
+    width: 150px;
+    height: 320px;
+    top: 230px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero > .john {
+    width: 200px;
+    opacity: 0.7;
+  }
+  .hero > .thomas {
+    width: 200px;
+    opacity: 0.7;
+  }
+  .hero > .david {
+    opacity: 0.7;
+  }
+  .hero > .kobe {
+    opacity: 0.7;
+  }
+  .hero > .jocko {
+    opacity: 0.5;
+  }
+  .hero {
+    padding: 65px 0 450px;
+    display: flex;
+    justify-content: center;
+  }
+  .why {
+    margin-top: 75px;
+  }
+  .why > img {
+    width: 100pxpx;
+  }
+  .features {
+    margin-bottom: 60px;
+  }
+  .last {
+    gap: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .body {
+    padding: 15px 30px;
+  }
+  .hero {
+    padding-bottom: 0px;
+  }
+  .hero > .jocko {
+    display: none;
+  }
+
+  .hero > .david {
+    width: 180px;
+  }
+
+  .hero > .john {
+    top: 600px;
+  }
+
+  .why {
+    gap: 0;
+    padding-bottom: 100px;
+    margin-top: 400px;
+  }
+
+  .why > img {
+    width: 300px;
+  }
+
+  .why > .text > h2 {
+    font-size: 1.8rem;
+  }
+
+  .features > h2 {
+    font-size: 1.8rem;
+    max-width: 60%;
+  }
+
+  .features-container {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+    grid-template-rows: repeat(2, auto); /* Creates 2 rows with auto height */
+    gap: 50px; /* Adds space between grid items */
+  }
+
+  .feature {
+    width: 230px;
+  }
+
+  .why > .text > h4 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .last {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center aligns content and form */
+    gap: 0; /* Removes any potential gap set by flexbox */
+  }
+
+  .last > .content {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0; /* Ensure there's no bottom margin */
+    padding-bottom: 0; /* Ensure there's no bottom padding */
+  }
+
+  .last > form {
+    margin-top: 20px; /* Ensure there's no top margin */
+    padding-top: 0; /* Ensure there's no top padding */
+  }
+
+  .last > .content > h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .hero > .content > h2 {
+    font-size: 1.3rem;
+    line-height: 30px;
+    width: 100%; /* Change fixed width to a percentage */
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+  }
+
+  .hero > .content > h3 {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .thomas {
+    display: none;
+  }
+
+  .hero > .kobe {
+    top: 150px;
+    opacity: 0.4;
+  }
+
+  .hero > .david {
+    top: 450px;
+    opacity: 0.4;
+  }
+
+  .hero > .john {
+    left: 30px;
+    height: 300px;
+    opacity: 0.4;
+  }
+
+  .why {
+    margin-top: 360px;
+    flex-direction: column;
+  }
+
+  .why > img {
+    width: 100%;
+  }
+
+  .features-container {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Creates 1 equal-width column */
+    grid-template-rows: repeat(2, auto); /* Creates 2 rows with auto height */
+    gap: 35px; /* Adds space between grid items */
+  }
+
+  .feature {
+    width: 100%; /* Adjust to 100% to fit within the parent container */
+  }
+
+  .feature > p {
+    margin-top: 15px;
+  }
+
+  .features > h2 {
+    max-width: 100%; /* Ensure it fits within the parent container */
+    height: fit-content;
+  }
+
+  .hero > .content > form {
+    margin-top: 60px;
+    gap: 10px;
+  }
+
+  input {
+    width: 100%; /* Make input field width 100% */
+    max-width: 200px; /* Limit the maximum width */
+  }
+}
