@@ -24,9 +24,9 @@ function App() {
 
       console.log(email);
 
-      const emailApi = process.env.VITE_API_URL + "/email";
+      //const emailApi = process.env.VITE_API_URL + "/email";
 
-      fetch(emailApi, {
+      fetch('https://zenith-landingpage-0153831e54d2.herokuapp.com/api/email', {
         mode: "cors",
         method: "POST",
         headers: {
