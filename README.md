@@ -13,4 +13,5 @@
   - Refactor all css to tailwind
   - Navbar DONE
   - Hero(not pictures yet) DONE
-  - Why (text, not diagram)
+  - Why (text, not diagram) DONE
+  - Features

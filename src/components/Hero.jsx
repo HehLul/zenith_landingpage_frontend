@@ -6,7 +6,7 @@ import david from "../assets/Zenith/mcgregor2.png";
 
 function Hero() {
   return (
-    <div className="flex flex-col items-center pt-12 pb-28">
+    <div className="flex flex-col items-center pt-12 pb-28 h-full">
       <div className="flex flex-col items-center">
         <h1 className="text-6xl font-semibold font-roboto font-serif max-w-3xl text-center">
           Awaken the Giant Within Today

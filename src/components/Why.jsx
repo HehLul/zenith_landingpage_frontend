@@ -1,12 +1,13 @@
-import React from "react";
 import atomicHabits from "../assets/Zenith/AtomicHabits_IdentityDiagram2.png";
 
 function Why() {
   return (
-    <div className="why">
-      <div className="text">
-        <h2>Why Start Your Journey with Zenith?</h2>
-        <h4>
+    <div className="flex gap-10 items-center justify-center mt-60">
+      <div className="w-1/2">
+        <h2 className="text-4xl font-bold">
+          Why Start Your Journey with Zenith?
+        </h2>
+        <h4 className="text-lg font-medium mt-5">
           Many ambitious men struggle with discipline and focus.
           Self-improvement attempts often lead to temporary success, but old
           habits soon resurface.
@@ -22,7 +23,11 @@ function Why() {
           performance and success.
         </h4>
       </div>
-      <img src={atomicHabits} alt="Atomic Habits Identity Diagram" />
+      <img
+        className="h-1/3"
+        src={atomicHabits}
+        alt="Atomic Habits Identity Diagram"
+      />
     </div>
   );
 }
