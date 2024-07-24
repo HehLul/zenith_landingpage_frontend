@@ -2,7 +2,7 @@ import atomicHabits from "../assets/Zenith/AtomicHabits_IdentityDiagram2.png";
 
 function Why() {
   return (
-    <div className="flex gap-10 items-center justify-center mt-60">
+    <div className="flex gap-10 items-center justify-center mt-2 md:mt-24 lg:mt-60">
       <div className="w-1/2">
         <h2 className="text-4xl font-bold">
           Why Start Your Journey with Zenith?

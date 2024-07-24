@@ -15,14 +15,14 @@ function Hero() {
           Leverage our curated tools to gain an unfair advantage amongst high
           achievers. Start your journey today and redefine your limits.
         </h2>
-        <form className="flex gap-1 mt-5" action="https://hi" method="post">
+        <form className="flex gap-2 mt-5" action="https://hi" method="post">
           <input
             name="email"
             type="email"
             placeholder="Enter your email"
-            className="p-3 rounded-lg"
+            className="p-3 rounded-lg text-black"
           />
-          <button className="bg-purple p-3 px-5 rounded-lg text-center">
+          <button className="bg-purple p-3 px-5 rounded-lg text-center font-medium">
             Subscribe
           </button>
         </form>
