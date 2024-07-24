@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useEffect } from "react";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Why from "./components/Why";
@@ -79,7 +79,7 @@ function App() {
   }, []);
 
   return (
-    <div className="content">
+    <div className="bg-black text-white ">
       <Navbar />
       <Hero />
       <Why />

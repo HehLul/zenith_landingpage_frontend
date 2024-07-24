@@ -166,16 +166,20 @@ button:hover {
   margin-top: 15px;
 }
 
-.hero > .kobe,
-.hero > .thomas,
-.hero > .jocko,
-.hero > .john,
-.hero > .david {
+.hero > .images {
+  position: relative;
+}
+
+.hero > .images > .kobe,
+.hero > .images > .thomas,
+.hero > .images > .jocko,
+.hero > .images > .john,
+.hero > .images > .david {
   animation: slideIn 1s ease forwards;
   opacity: 0;
 }
 
-.hero > .kobe {
+.hero > .images > .kobe {
   position: absolute;
   top: 270px;
   left: 45px;
@@ -186,7 +190,7 @@ button:hover {
   animation-name: slideInFromLeft;
 }
 
-.hero > .thomas {
+.hero > .images > .thomas {
   position: absolute;
   top: 620px;
   left: 200px;
@@ -197,7 +201,7 @@ button:hover {
   animation-name: slideInFromLeft;
 }
 
-.hero > .jocko {
+.hero > .images > .jocko {
   position: absolute;
   top: 720px;
   justify-self: center;
@@ -208,7 +212,7 @@ button:hover {
   animation-name: slideInFromBottom;
 }
 
-.hero > .john {
+.hero > .images > .john {
   position: absolute;
   top: 550px;
   right: 140px;
@@ -220,15 +224,14 @@ button:hover {
   animation-name: slideInFromRight;
 }
 
-.hero > .david {
+.hero > .images > .david {
   position: absolute;
-  top: 170px;
+  top: 190px;
   right: 43px;
   justify-self: center;
-  width: 180px;
-  height: 400px;
+  width: 200px;
   object-fit: contain;
-  z-index: -1;
+  z-index: -2;
   animation-name: slideInFromRight;
 }
 
@@ -378,7 +381,6 @@ button:hover {
 }
 .last > .content > h4 {
   margin-top: 40px;
-  /* margin-left: 5px; */
   max-width: 60%;
   font-size: 1.5rem;
 }
@@ -407,16 +409,16 @@ button:hover {
 }
 
 @media (max-width: 1320px) {
-  .hero > .jocko {
+  .hero > .images > .jocko {
     width: 350px;
   }
-  .hero > .thomas {
+  .hero > .images > .thomas {
     left: 100px;
   }
-  .hero > .john {
+  .hero > .images > .john {
     right: 100px;
   }
-  .hero > .david {
+  .hero > .images > .david {
     width: 150px;
     height: 320px;
     top: 230px;
@@ -424,21 +426,21 @@ button:hover {
 }
 
 @media (max-width: 1024px) {
-  .hero > .john {
+  .hero > .images > .john {
     width: 200px;
     opacity: 0.7;
   }
-  .hero > .thomas {
+  .hero > .images > .thomas {
     width: 200px;
     opacity: 0.7;
   }
-  .hero > .david {
+  .hero > .images > .david {
     opacity: 0.7;
   }
-  .hero > .kobe {
+  .hero > .images > .kobe {
     opacity: 0.7;
   }
-  .hero > .jocko {
+  .hero > .images > .jocko {
     opacity: 0.5;
   }
   .hero {
@@ -467,15 +469,15 @@ button:hover {
   .hero {
     padding-bottom: 0px;
   }
-  .hero > .jocko {
+  .hero > .images > .jocko {
     display: none;
   }
 
-  .hero > .david {
+  .hero > .images > .david {
     width: 180px;
   }
 
-  .hero > .john {
+  .hero > .images > .john {
     top: 600px;
   }
 
@@ -564,24 +566,25 @@ button:hover {
     display: none;
   }
 
-  .hero > .kobe {
+  .hero > .images > .kobe {
     top: 150px;
-    opacity: 0.4;
+    opacity: 0.3;
   }
 
-  .hero > .david {
+  .hero > .images > .david {
     top: 450px;
-    opacity: 0.4;
-  }
-
-  .hero > .john {
-    left: 30px;
     height: 300px;
     opacity: 0.4;
   }
 
+  .hero > .images > .john {
+    left: 30px;
+    height: 300px;
+    opacity: 0.3;
+  }
+
   .why {
-    margin-top: 360px;
+    margin-top: 300px;
     flex-direction: column;
   }
 
@@ -618,5 +621,11 @@ button:hover {
   input {
     width: 100%; /* Make input field width 100% */
     max-width: 200px; /* Limit the maximum width */
+  }
+}
+
+@media (max-width: 406px) {
+  .why {
+    margin-top: 195px;
   }
 }

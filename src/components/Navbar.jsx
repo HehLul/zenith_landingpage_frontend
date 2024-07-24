@@ -1,5 +1,4 @@
-import React from "react";
-import logo from "../assets/Zenith-removebg-preview.png";
+import logo from "../assets/zenith-updated-removebg-preview.png";
 
 function Navbar() {
   return (
