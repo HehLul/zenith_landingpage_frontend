@@ -14,4 +14,6 @@
   - Navbar DONE
   - Hero(not pictures yet) DONE
   - Why (text, not diagram) DONE
-  - Features
+  - Features DONE
+  - Last DONE
+  - Footer
