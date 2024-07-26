@@ -7,11 +7,11 @@ import david from "../assets/Zenith/mcgregor2.png";
 function Hero() {
   return (
     <div className="relative overflow-hidden h-screen bg-black text-white">
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-        <h1 className="text-6xl font-semibold font-roboto font-serif max-w-3xl text-center">
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
+        <h1 className="text-6xl font-semibold font-roboto font-serif max-w-3xl text-center mb-4">
           Awaken the Giant Within Today
         </h1>
-        <h2 className="text-2xl font-semibold max-w-3xl text-center mt-8">
+        <h2 className="text-2xl font-semibold max-w-3xl text-center mt-4">
           Leverage our curated tools to gain an unfair advantage amongst high
           achievers. Start your journey today and redefine your limits.
         </h2>

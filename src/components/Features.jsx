@@ -1,10 +1,39 @@
+import { useEffect, useState, useRef } from "react";
+
 function Features() {
+  const [visible, setVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col items-center pt-28">
+    <div
+      ref={sectionRef}
+      className={`flex flex-col items-center pt-28 ${
+        visible ? "fade-in-up" : ""
+      }`}
+    >
       <h2 className="text-4xl font-bold max-w-lg text-center">
         Zenith's Innovative Features for Identity Refinement
       </h2>
-      <div className="grid grid-cols-1 gap-12  sm:grid-cols-2 lg:grid-cols-2 max-w-4xl gap-28 mt-20 text-center">
+      <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-2 max-w-4xl gap-28 mt-20 text-center">
         <div className="feature">
           <h3 className="text-2xl font-semibold">
             Daily Dose of Transformative Content
