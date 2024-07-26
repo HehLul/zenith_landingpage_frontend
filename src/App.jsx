@@ -1,15 +1,18 @@
 // src/App.js
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Why from "./components/Why";
 import Features from "./components/Features";
 import Last from "./components/Last";
 import Footer from "./components/Footer";
+import Modal from "./components/Modal"; // Import the Modal component
 import ReactGa from "react-ga";
 import.meta.env;
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     ReactGa.initialize("G-8J3NQ53M00");
     ReactGa.pageview("/");
@@ -35,9 +38,7 @@ function App() {
         body: JSON.stringify({ email }),
       })
         .then(() => {
-          alert(
-            "Thank you for subscribing to Zenith! Please check your inbox for a welcome email."
-          );
+          setIsModalOpen(true); // Open the modal on successful submission
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -86,6 +87,16 @@ function App() {
       <Features />
       <Last />
       <Footer />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Subscription Success"
+      >
+        <p>
+          Thank you for subscribing to Zenith! Please check your inbox for a
+          welcome email.
+        </p>
+      </Modal>
     </div>
   );
 }
