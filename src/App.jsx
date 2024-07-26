@@ -79,7 +79,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-black text-white px-16">
+    <div className="bg-black text-white px-4 lg:px-16">
       <Navbar />
       <Hero />
       <Why />

@@ -6,8 +6,8 @@ import david from "../assets/Zenith/mcgregor2.png";
 
 function Hero() {
   return (
-    <div className="flex flex-col items-center pt-12 pb-28 h-full">
-      <div className="flex flex-col items-center">
+    <div className="relative overflow-hidden h-screen bg-black text-white">
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
         <h1 className="text-6xl font-semibold font-roboto font-serif max-w-3xl text-center">
           Awaken the Giant Within Today
         </h1>
@@ -15,27 +15,44 @@ function Hero() {
           Leverage our curated tools to gain an unfair advantage amongst high
           achievers. Start your journey today and redefine your limits.
         </h2>
-        <form className="flex gap-2 mt-5" action="https://hi" method="post">
+        <form className="flex flex-col sm:flex-row gap-2 mt-8">
           <input
             name="email"
             type="email"
             placeholder="Enter your email"
-            className="p-3 rounded-lg text-black"
+            className="p-3 rounded-lg text-black w-full sm:w-60 text-lg"
           />
-          <button className="bg-purple p-3 px-5 rounded-lg text-center font-medium">
+          <button className="bg-purple p-3 px-5 rounded-lg text-center font-medium text-lg transform transition-transform duration-300 hover:scale-110">
             Subscribe
           </button>
         </form>
-        <h3 className="text-left font-light text-base mt-2">
+        <h3 className="text-left font-light text-base mt-2 sm:max-w-screen-sm">
           Enter your best email to be first in line for Zenith's launch.
         </h3>
       </div>
-      <div className="hidden">
-        <img className="kobe" src={kobe} alt="Kobe Bryant" />
-        <img className="thomas" src={thomas} alt="Thomas Edison" />
-        <img className="jocko" src={jocko} alt="Jocko Willink" />
-        <img className="john" src={john} alt="John Wick" />
-        <img className="david" src={david} alt="David Goggins" />
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="relative w-full h-full flex">
+          <div className="absolute top-0 left-0 flex w-full h-full animate-scroll">
+            <img className="w-60 h-auto mx-4" src={kobe} alt="Kobe Bryant" />
+            <img
+              className="w-60 h-auto mx-4"
+              src={thomas}
+              alt="Thomas Edison"
+            />
+            <img className="w-60 h-auto mx-4" src={jocko} alt="Jocko Willink" />
+            <img className="w-60 h-auto mx-4" src={john} alt="John Wick" />
+            <img className="w-60 h-auto mx-4" src={david} alt="David Goggins" />
+            <img className="w-60 h-auto mx-4" src={kobe} alt="Kobe Bryant" />
+            <img
+              className="w-60 h-auto mx-4"
+              src={thomas}
+              alt="Thomas Edison"
+            />
+            <img className="w-60 h-auto mx-4" src={jocko} alt="Jocko Willink" />
+            <img className="w-60 h-auto mx-4" src={john} alt="John Wick" />
+            <img className="w-60 h-auto mx-4" src={david} alt="David Goggins" />
+          </div>
+        </div>
       </div>
     </div>
   );
