@@ -1,8 +1,8 @@
 import kobe from "../assets/Zenith/kobe.jpeg";
 import thomas from "../assets/Zenith/download.jpeg";
-import jocko from "../assets/Zenith/jockomain.webp";
+import jocko from "../assets/Zenith/gogginsnew.jpeg";
 import john from "../assets/Zenith/Keanu Reeves.jpeg";
-import david from "../assets/Zenith/mcgregor2.png";
+import david from "../assets/Zenith/miketyson.jpeg";
 
 function Hero() {
   return (
@@ -33,24 +33,24 @@ function Hero() {
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="relative w-full h-full flex">
           <div className="absolute top-0 left-0 flex w-full h-full animate-scroll">
-            <img className="w-64 h-auto mx-5" src={kobe} alt="Kobe Bryant" />
+            <img className="w-64 h-auto mx-4" src={kobe} alt="Kobe Bryant" />
             <img
-              className="w-64 h-auto mx-5"
+              className="w-64 h-auto mx-4"
               src={thomas}
               alt="Thomas Edison"
             />
-            <img className="w-64 h-auto mx-5" src={jocko} alt="Jocko Willink" />
-            <img className="w-64 h-auto mx-5" src={john} alt="John Wick" />
-            <img className="w-64 h-auto mx-5" src={david} alt="David Goggins" />
-            <img className="w-64 h-auto mx-5" src={kobe} alt="Kobe Bryant" />
+            <img className="w-64 h-auto mx-4" src={jocko} alt="Jocko Willink" />
+            <img className="w-64 h-auto mx-4" src={john} alt="John Wick" />
+            <img className="w-60 h-auto mx-4" src={david} alt="David Goggins" />
+            <img className="w-64 h-auto mx-4" src={kobe} alt="Kobe Bryant" />
             <img
-              className="w-64 h-auto mx-5"
+              className="w-64 h-auto mx-4"
               src={thomas}
               alt="Thomas Edison"
             />
-            <img className="w-64 h-auto mx-5" src={jocko} alt="Jocko Willink" />
-            <img className="w-64 h-auto mx-5" src={john} alt="John Wick" />
-            <img className="w-64 h-auto mx-5" src={david} alt="David Goggins" />
+            <img className="w-64 h-auto mx-4" src={jocko} alt="Jocko Willink" />
+            <img className="w-64 h-auto mx-4" src={john} alt="John Wick" />
+            <img className="w-60 h-auto mx-4" src={david} alt="David Goggins" />
           </div>
         </div>
       </div>
