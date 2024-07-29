@@ -26,7 +26,7 @@ function Hero() {
             Subscribe
           </button>
         </form>
-        <h3 className="text-left font-light text-base mt-2 sm:max-w-screen-sm">
+        <h3 className="self-center text-center font-light text-base mt-2 sm:max-w-screen-sm">
           Enter your best email to be first in line for Zenith's launch.
         </h3>
       </div>
@@ -34,7 +34,7 @@ function Hero() {
         <div className="relative flex w-full h-full">
           <div className="flex w-full h-full justify-center">
             <img
-              className="flex-shrink-0 max-w-lg h-auto mx-4 my-4 sm:hidden block m-auto"
+              className="flex-shrink-0 max-w-lg h-auto mx-4 my-4 sm:hidden block m-auto opacity-70"
               src={john}
               alt="Jocko Willink"
             />
