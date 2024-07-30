@@ -8,7 +8,7 @@ function Hero() {
   return (
     <div className="relative overflow-hidden h-screen bg-black text-white">
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-        <h1 className="text-6xl font-semibold font-roboto font-serif max-w-3xl text-center">
+        <h1 className="text-6xl font-semibold font-roboto font-serif max-w-3xl text-center sm:mt-4">
           Embrace the Mindset of High Achievers Effortlessly
         </h1>
         <h2 className="text-2xl font-semibold max-w-3xl text-center mt-8">
